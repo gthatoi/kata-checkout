@@ -32,15 +32,12 @@ To set up the Kata Application locally using Docker, follow these steps:
    ```bash
    cp .env.example .env
    ```
-4. Build the Docker image:
-    ```bash
-   docker build -t kata-checkout .
-5. Start a Docker container with the built image:
-    ```bash
-   docker run -d -p 8000:8000 --name kata-checkout kata-checkout
+4. Run the Makefile
+   ```bash
+    make install
+   ```
    # This command will start a Docker container named kata-checkout on port 8000
-
-6. Kata should now be up and running at http://localhost:8000.
+5. Kata should now be up and running at http://localhost:8000.
 
 ## API
 
@@ -85,7 +82,7 @@ The Checkout Service includes unit tests to ensure the correctness of its functi
 1. Access the running Docker container:
 
    ```bash
-   docker exec -it kata-checkout bash
+   docker exec -it kata-checkout /bin/sh
    
 2. Run the unit test:
 ```bash

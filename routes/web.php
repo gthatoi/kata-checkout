@@ -12,11 +12,20 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-
-$router->get('/', function () use ($router) {
-    return 'Hello From Kata Checkout';
-});
-
 $router->post('/checkout', [
     'uses' => 'CheckoutController@post'
 ]);
+
+$router->get('/', function () use ($router) {
+    return '
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Kata Checkout</title>
+        </head>
+        <body>
+            <img src="/images/cat.jpg" alt="Catieee">
+        </body>
+        </html>
+    ';
+});
