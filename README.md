@@ -1,7 +1,7 @@
 # Kata Checkout
 
-The Kata Checkout is a RESTful API built with Lumen which has a supermarket checkout price calculation functionality (based on pricing configurations) 
-Additionally, it has Unit Tests :D
+The Kata Checkout is a RESTful API built with Lumen which has a supermarket checkout price calculation functionality (based on pricing configurations). 
+The checkout logic is covered with Unit Tests. 🕺
 
 ## Table of Contents
 
@@ -28,53 +28,19 @@ To set up the Kata Application locally using Docker, follow these steps:
 2. Navigate to the project directory:
     ```bash
     cd kata-checkout
-3. Create a .env file by making a copy of the .env.example file:
-   ```bash
-   cp .env.example .env
-   ```
-4. Run the Makefile
+3. Run the Makefile: This command will start a Docker container named kata-checkout on port 8000, also runs composer install
    ```bash
     make install
    ```
-   # This command will start a Docker container named kata-checkout on port 8000
-5. Kata should now be up and running at http://localhost:8000.
+
+4. Kata should now be up and running at http://localhost:8000.
 
 ## API
 
-Here are the REST endpoint provided for the checkout:
+Here is the REST api postman collection provided for the checkout:
+ [Postman Checkout Collection](./checkout-api-postman-collection.json)
+(you can import this file in postman)
 
-### Calculate Total Price
-
-**Endpoint**: `POST /checkout`
-
-Calculate the total amount of items in the supermarket checkout.
-
-**Request Body**:
-
-```json
-{
-    "skus": [
-        "A",
-        "B",
-        "A",
-        "C",
-        "D",
-        "A",
-        "B"
-    ]
-}
-```
-**Response**:
-
-The response from kata-checkout API will be in JSON format and contain the calculated total amount based on the provided items in the supermarket checkout.
-
-Example response:
-
-```json
-{
-    "totalAmount": 210
-}
-```
 ## Unit Tests
 
 The kata-checkout includes unit tests to ensure the correctness of its functionality. To run the unit tests, follow these steps:
@@ -90,5 +56,3 @@ The kata-checkout includes unit tests to ensure the correctness of its functiona
 ```
 The unit tests cover various scenarios that ensures the correct price calculation of the Checkout. 
 You can modify the unit tests to match your requirements and test cases.
-
-💃🕺

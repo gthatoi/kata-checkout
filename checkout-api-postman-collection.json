@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "7e9717b1-0264-409b-a44d-65cf314e6e71",
+		"name": "Kata-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20815041"
+	},
+	"item": [
+		{
+			"name": "checkout-api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"skus\": [\"A\", \"B\", \"C\", \"D\", \"A\",\"B\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/checkout"
+			},
+			"response": []
+		}
+	]
+}
