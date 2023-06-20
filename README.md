@@ -23,7 +23,7 @@ To set up the Kata Application locally using Docker, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/checkout-service.git
+   git clone https://github.com/gthatoi/kata-checkout
 
 2. Navigate to the project directory:
     ```bash
@@ -77,7 +77,7 @@ Example response:
 ```
 ## Unit Tests
 
-The Checkout Service includes unit tests to ensure the correctness of its functionality. To run the unit tests, follow these steps:
+The kata-checkout includes unit tests to ensure the correctness of its functionality. To run the unit tests, follow these steps:
 
 1. Access the running Docker container:
 
